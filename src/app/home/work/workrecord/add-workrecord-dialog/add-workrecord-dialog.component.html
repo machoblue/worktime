@@ -1,0 +1,73 @@
+<h1 mat-dialog-title>作業実績編集</h1>
+<div mat-dialog-content>
+    <div class="sub">
+        <p>開始：</p>
+      <mat-form-field class="date">
+        <input matInput [matDatepicker]="picker" placeholder="日付">
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+      </mat-form-field>
+        <p>　</p>
+        <mat-form-field class="hour">
+            <mat-select placeholder="時">
+                <mat-option *ngFor="let h of hour" [value]="h.value">
+                    {{h.viewValue}}
+                </mat-option>
+            </mat-select>
+            </mat-form-field>
+        <p>：</p>
+        <mat-form-field class="minute">
+            <mat-select placeholder="分">
+                <mat-option *ngFor="let m of minute" [value]="m.value">
+                    {{m.viewValue}}
+                </mat-option>
+            </mat-select>
+        </mat-form-field>
+    </div>
+    <div class="sub">
+        <p>終了：</p>
+      <mat-form-field class="date">
+        <input matInput [matDatepicker]="picker2" placeholder="日付">
+        <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
+        <mat-datepicker #picker2></mat-datepicker>
+      </mat-form-field>
+        <p>　</p>
+        <mat-form-field class="hour">
+            <mat-select placeholder="時">
+                <mat-option *ngFor="let h of hour" [value]="h.value">
+                    {{h.viewValue}}
+                </mat-option>
+            </mat-select>
+            </mat-form-field>
+        <p>：</p>
+        <mat-form-field class="minute">
+            <mat-select placeholder="分">
+                <mat-option *ngFor="let m of minute" [value]="m.value">
+                    {{m.viewValue}}
+                </mat-option>
+            </mat-select>
+        </mat-form-field>
+    </div>
+    <div class="sub">
+        <p>タスク：</p>
+        <mat-form-field class="tasks">
+            <mat-select placeholder="タスク">
+                <mat-option *ngFor="let task of tasks" [value]="task.value">
+                    {{task.viewValue}}
+                </mat-option>
+            </mat-select>
+        </mat-form-field>
+    </div>
+<!--
+  <mat-form-field>
+    <input matInput [(ngModel)]="">
+  </mat-form-field>
+-->
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="remove()">削除</button>
+  <button mat-button cdkFocusInitial>保存</button>
+<!--
+  <button mat-button [mat-dialog-close]="" cdkFocusInitial>保存</button>
+-->
+</div>

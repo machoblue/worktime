@@ -1,0 +1,11 @@
+.login-container {
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+mat-card-actions {
+    display: flex;
+    flex-direction: row-reverse;
+}

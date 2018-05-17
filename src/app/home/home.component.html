@@ -1,0 +1,24 @@
+<div class="tlc-app">
+    <div class="sidebar-panel">
+        <div class="sidebar-header" >
+            <div>MENU</div>
+        </div>
+        <div class="sidebar-menu">
+            <button mat-button class="menuitem" routerLink="/home/work">作業実績記録</button>
+            <mat-divider></mat-divider>
+            <button mat-button class="menuitem" routerLink="/home/users">ユーザー管理</button>
+            <mat-divider></mat-divider>
+            <button mat-button class="menuitem" routerLink="/home/tasks">タスク管理</button>
+            <mat-divider></mat-divider>
+            <button mat-button class="menuitem" routerLink="/login">ログアウト</button>
+        </div>
+    </div>
+    <div class="app-bar-and-content-panel">
+        <mat-toolbar class="app-bar" color="primary">
+            <div>WorkTimeManager2</div>
+        </mat-toolbar>
+        <div class="content-panel" >
+            <router-outlet></router-outlet>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,14 @@
+.mat-dialog-actions {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.mat-table {
+}
+
+.sub {
+    overflow: auto;
+    max-height: 300px;
+    display: flex;
+    flex-direction: column;
+}

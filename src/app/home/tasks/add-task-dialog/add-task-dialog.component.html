@@ -1,0 +1,21 @@
+<h1 mat-dialog-title>タスク追加</h1>
+<div mat-dialog-content>
+    <div class="sub">
+        <mat-form-field>
+            <input matInput placeholder="ユーザーID" [(ngModel)]="task.taskId">
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="名前" [(ngModel)]="task.name">
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="メモ" [(ngModel)]="task.memo">
+        </mat-form-field>
+    </div>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="remove()">削除</button>
+  <button mat-button cdkFocusInitial>保存</button>
+<!--
+  <button mat-button [mat-dialog-close]="" cdkFocusInitial>保存</button>
+-->
+</div>

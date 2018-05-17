@@ -1,0 +1,67 @@
+    <mat-card>
+        <mat-card-header>
+            <mat-card-title>
+                作業実績記録
+            </mat-card-title>
+            <mat-card-subtitle>
+                担当のタスクを登録し、タスクの開始・終了で作業時間を記録します。
+            </mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content>
+              <table mat-table #table [dataSource]="dataSource">
+
+                    <!-- Position Column -->
+                  <!--
+                    <ng-container matColumnDef="id">
+                      <th mat-header-cell *matHeaderCellDef> ID </th>
+                      <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+                    </ng-container>
+-->
+
+                    <!-- Name Column -->
+                    <ng-container matColumnDef="taskId">
+                      <th mat-header-cell *matHeaderCellDef> TASKID </th>
+                      <td mat-cell *matCellDef="let element"> {{element.taskId}} </td>
+                    </ng-container>
+
+                    <!-- Weight Column -->
+                    <ng-container matColumnDef="name">
+                      <th mat-header-cell *matHeaderCellDef> NAME </th>
+                      <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+                    </ng-container>
+
+                    <!-- Symbol Column -->
+                    <ng-container matColumnDef="time">
+                      <th mat-header-cell *matHeaderCellDef> TIME </th>
+                      <td mat-cell *matCellDef="let element"> {{element.time}} </td>
+                    </ng-container>
+
+                    <ng-container matColumnDef="start">
+                      <th mat-header-cell *matHeaderCellDef>  </th>
+                      <td mat-cell *matCellDef="let element"> 
+                          <button mat-button>開始</button>
+                      </td>
+                    </ng-container>
+
+                    <ng-container matColumnDef="end">
+                      <th mat-header-cell *matHeaderCellDef>  </th>
+                      <td mat-cell *matCellDef="let element"> 
+                          <button mat-button>終了</button>
+                      </td>
+                    </ng-container>
+
+                    <ng-container matColumnDef="edit">
+                      <th mat-header-cell *matHeaderCellDef>  </th>
+                      <td mat-cell *matCellDef="let element"> 
+                          <button mat-button color="primary">編集</button>
+                      </td>
+                    </ng-container>
+
+                    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+                  </table>
+        </mat-card-content>
+        <mat-card-actions>
+            <button mat-button (click)="add()">追加</button>
+        </mat-card-actions>
+    </mat-card>

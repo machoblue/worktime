@@ -1,0 +1,60 @@
+.tlc-app {
+    display: flex;
+    height: 100%;
+    position: absolute;
+    width: 100%;
+}
+
+.sidebar-panel {
+    height: 100%;
+    width: 272px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
+}
+
+.sidebar-header {
+    flex: 0 0 auto;
+    height: 64px;
+    padding-left: 24px;
+    
+    /* サイドバーヘッダーの中身を中心にするため。 */
+    display: flex;
+    align-items: center;
+    color: gray;
+}
+
+.sidebar-menu {
+    flex: 1 1 auto;
+    /* overflow-x: hidden; */
+    overflow-y: auto;
+}
+
+.app-bar-and-content-panel {
+    position: relative;
+    width: 100%;
+    background: whitesmoke;
+}
+
+.app-bar {
+    position: relative;
+    z-index: 3;
+    height: 64px;
+    box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.16), 0 1px 3px 0 rgba(0, 0, 0, 0.2);
+}
+
+.content-panel {
+    top: 64px;
+    overflow: auto;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    position: absolute;
+}
+
+.menuitem {
+    width: 100%;
+    text-align: left;
+}
